@@ -1,14 +1,19 @@
+mixin nav-content()
+	ul
+		li: a(href="../..") About
+		li: a(href="../..") Contact
+		li: a(href="mailto:email@izelmaras.com") Email
+
+.mobile-nav.is-open
+	+nav-content()
+
 header
 	.header-position
 		h1.logo	Izel Maras
 
 		nav.site-nav
-			ul
-				li: a(href="../..") About
-				li: a(href="../..") Contact
-				li: a(href="mailto:email@izelmaras.com") Email
+			+nav-content()
 		
-
 		.mobile-nav-toggle: span
 		
 

@@ -539,42 +539,64 @@ hr {
     height: 50px;
     margin-right: 20px; }
 
+.mobile-nav {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: white;
+  padding: 60px 0 20px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+  .mobile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .mobile-nav li {
+    text-align: center;
+    margin-bottom: 10px; }
+
 @media (max-width: 775px) {
   .home-wrap header {
     width: auto; }
-  .header-position {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    left: auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .site-nav,
-  .email-link {
+    .home-wrap header .header-position {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+  .home-wrap .site-nav,
+  .home-wrap .email-link {
     display: none; }
-  span:before {
+  .home-wrap .mobile-nav-toggle span:before {
     content: "";
     display: block;
     height: 3px;
     background: #333;
     position: relative;
     top: 13px; }
-  span {
+  .home-wrap .mobile-nav-toggle span {
     content: "";
     display: block;
     height: 3px;
     background: #333;
     position: relative;
     top: 10px; }
-  span:after {
+  .home-wrap .mobile-nav-toggle span:after {
     content: "";
     display: block;
     height: 3px;
     background: #333;
     position: relative;
-    top: 23px; } }
+    top: 23px; }
+  .mobile-nav.is-open {
+    display: block;
+    -webkit-transform: translate(0%);
+            transform: translate(0%); } }
